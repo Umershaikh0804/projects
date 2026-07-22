@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* ---------- GLOBAL PAGE STYLE ---------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white; /* white background as required */
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- CENTERING ENTIRE PAGE ---------- */
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- MAIN BOX ---------- */
+
+.main-box {
+    background: #ffffff;
+    padding: 40px;
+    width: 350px;
+    display: grid;
+    gap: 15px;
+    border-radius: 15px;
+
+    /* Soft shadow */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- MENU BUTTONS (anchor tags) ---------- */
+
+.menu-btn {
+    text-decoration: none;  /* remove underline */
+    background: #fff8cc;   /* very light yellow */
+    color: black;
+    padding: 14px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+
+    /* smooth hover */
+    transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.menu-btn:hover {
+    background: #f4d400; /* dark yellow */
+    color: black;
+}
+
+/* ---------- DROPDOWN ---------- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+}
+
+/* Hidden dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    background: #fff8cc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s ease;
+}
+
+/* Dropdown hover */
+.dropdown-content a:hover {
+    background: #f4d400;
+}
+
+/* Show dropdown on button hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

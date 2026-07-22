@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* Global Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+}
+
+/* Background */
+body{
+    min-height:100vh;
+    background:#f2f5f9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:1.5rem;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    opacity:0.18;
+    z-index:0;
+}
+
+/* Glass Panel */
+.glass-panel{
+    position:relative;
+    z-index:10;
+    width:100%;
+    max-width:500px;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    border-radius:2rem;
+    box-shadow:0 25px 50px -15px rgba(0,0,0,0.25);
+    padding:2.5rem;
+}
+
+/* Back Button */
+.back-btn{
+    text-decoration:none;
+    background:#2d3e54;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:0.9rem;
+    display:inline-block;
+    margin-bottom:20px;
+    transition:0.2s;
+}
+
+.back-btn:hover{
+    background:#f5b342;
+    color:#1d2b38;
+}
+
+/* Title */
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#1A2A3A;
+}
+
+/* Form */
+.student-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+label{
+    font-size:14px;
+    font-weight:600;
+}
+
+input, select{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* Button */
+.submit-btn{
+    background:#f5b342;
+    border:none;
+    padding:12px;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.submit-btn:hover{
+    background:#d89c2f;
+}
+
+/* Error */
+.error-box{
+    color:red;
+    text-align:center;
+    margin-bottom:15px;
+}
